@@ -1,0 +1,23 @@
+.About_div{
+          width: 100%;
+          height: 115vh;     
+}
+
+.About_p{
+          width: 73rem;
+          height: 100px;
+}
+
+
+.name_A{
+          color: rgb(54, 54, 206);
+}
+.name_A:hover{
+          color: rgb(39, 39, 249);
+}
+
+.About_img{
+          width: 25%;
+          height: 220px;
+          border-radius: 30px;
+}
