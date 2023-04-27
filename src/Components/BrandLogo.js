@@ -1,9 +1,11 @@
-import React, { useState} from "react";
+import React, { useState, useEffect } from "react";
 import "./Images-style.css";
 import "./navmenu.css";
+import myLogo from './logo-no-background.png';
 
 const BrandLogo = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsActive(!isActive);
@@ -13,10 +15,25 @@ const BrandLogo = () => {
     setIsActive(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="navbar">
+    <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="logoImage">
-        <a href="/Home" ><img src="logo-no-background.png" alt="Brand Logo" style={{ width: "100px"}}/></a>
+      <a href="/Home" ><img src={myLogo} alt="Brand Logo" style={{ width: "75px", height: "auto" }}/></a>
       </div>
       <div className="nav" >
         <ul className={`nav-menu ${isActive ? "active" : ""}`}>

@@ -1,11 +1,15 @@
 .About_div{
           width: 100%;
-          height: 115vh;     
+          top: 32px;
+          height: 115vh;
+          position: relative; 
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);  
 }
 
 .About_p{
           width: 73rem;
-          height: 100px;
+          height: 527px;
+          font-display:inherit          ;
 }
 
 
@@ -17,7 +21,60 @@
 }
 
 .About_img{
+          float: right;
+          margin: 0px 0px 15px 20px;
           width: 25%;
           height: 220px;
           border-radius: 30px;
+          filter:brightness(120%);
+          filter: drop-shadow(100%);
+          box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.1);  
+}
+
+@media (max-width:768px) {
+          .About_div{
+                    width: 100%;
+                    top: 55vh;
+                    height: 115vh;
+                    position: relative; 
+                    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);  
+          }
+          .About_p{
+                    width: auto;
+                    height: 527px;
+          }
+          .About_img{
+                    float: right;
+                    margin: 0px 0px 15px 20px;
+                    width: 50%;
+                    height: 220px;
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 30px;
+                    box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.1);  
+          }
+}
+
+@media screen {
+          .About_div{
+                    width: 100%;
+                    top: 30vh;
+                    height: 115vh;
+                    position: relative; 
+                    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);  
+          }
+          .About_p{
+                    width: auto;
+                    height: 527px;
+          }
+          .About_img{
+                    float: right;
+                    margin: 0px 0px 15px 20px;
+                    width: 25%;
+                    height: 220px;
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 30px;
+                    box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.1);  
+          }
 }
